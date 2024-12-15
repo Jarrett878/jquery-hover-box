@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hover Alert</title>
+    <!-- Include jQuery library from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #area {
+            width: 200px;
+            height: 200px;
+            background-color: #953674;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area">Hover Over Me</div>
+
+    <script>
+        $(document).ready(function() {
+            $("#area").hover(function() {
+                alert("Close me to turn the box green.");
+                $(this).css("background-color", "green");
+            }, function() {
+                $(this).css("background-color", "#953674");
+            });
+        });
+    </script>
+
+</body>
+</html>
